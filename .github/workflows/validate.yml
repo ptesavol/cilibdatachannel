@@ -1,0 +1,30 @@
+name: validate
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - '*'
+  workflow_dispatch:
+
+concurrency:
+  group: build-${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  install-lint-test:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: install-prerequisities
+        run:
+          source install-prerequisities.sh
+        shell: bash
+      - name: install
+        run:
+          ./install.sh
+        shell: bash

@@ -1,0 +1,7 @@
+{
+  "name": "cilibdatachannel",
+  "version": "1.0.0",
+  "dependencies": [
+    "libdatachannel"
+  ]
+}
