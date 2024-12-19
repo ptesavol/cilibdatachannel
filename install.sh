@@ -52,7 +52,7 @@ if [ -n "$TARGET_TRIPLET" ]; then
 fi
 
 if [ -n "$TARGET_TRIPLET" ]; then
-    vcpkg install --x-install-root=build/vcpkg_installed --triplet=$TARGET_TRIPLET
+    vcpkg install --x-install-root=build/vcpkg_installed --triplet=$TARGET_TRIPLET || cat /Users/runner/work/cilibdatachannel/cilibdatachannel/vcpkg/buildtrees/libdatachannel/config-arm64-osx-out.log
 else
-    vcpkg install --x-install-root=build/vcpkg_installed
+    vcpkg install --x-install-root=build/vcpkg_installed || cat /Users/runner/work/cilibdatachannel/cilibdatachannel/vcpkg/buildtrees/libdatachannel/config-arm64-osx-out.log
 fi

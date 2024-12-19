@@ -26,5 +26,5 @@ jobs:
         shell: bash
       - name: install
         run:
-          ./install.sh || cat /Users/runner/work/cilibdatachannel/cilibdatachannel/vcpkg/buildtrees/libdatachannel/config-arm64-osx-out.log
+          ./install.sh
         shell: bash
