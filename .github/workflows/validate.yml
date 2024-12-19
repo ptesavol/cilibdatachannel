@@ -28,3 +28,9 @@ jobs:
         run:
           ./install.sh
         shell: bash
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: vcpkg-log
+          path: |
+            /Users/runner/work/cilibdatachannel/cilibdatachannel/vcpkg/buildtrees/libdatachannel/*.log
