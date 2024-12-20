@@ -55,7 +55,7 @@ export CC=$(brew --prefix)/bin/clang
 export CXX=$(brew --prefix)/bin/clang++
 
 if [ -n "$TARGET_TRIPLET" ]; then
-    vcpkg install --x-install-root=build/vcpkg_installed --triplet=$TARGET_TRIPLET || cat /Users/runner/work/cilibdatachannel/cilibdatachannel/vcpkg/buildtrees/libdatachannel/config-arm64-osx-out.log
+    vcpkg install --x-install-root=build/vcpkg_installed --triplet=$TARGET_TRIPLET
 else
-    vcpkg install --x-install-root=build/vcpkg_installed || cat /Users/runner/work/cilibdatachannel/cilibdatachannel/vcpkg/buildtrees/libdatachannel/config-arm64-osx-out.log
+    vcpkg install --x-install-root=build/vcpkg_installed
 fi
